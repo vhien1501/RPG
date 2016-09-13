@@ -37,7 +37,7 @@ public class BoardGame extends JPanel implements ActionListener{
 		new Dimension(WIDTH, HIEGHT);
 
 		Hero = new Player(PLAYER_X, PLAYER_Y);
-		Map = new Map("Map");
+		Map = new TileMap("Map");
 
 		addKeyListener(new TAdapter());
 
@@ -53,7 +53,7 @@ public class BoardGame extends JPanel implements ActionListener{
 	public void paintComponent(Graphics g){
 
 		super.paintComponent(g);
-		DrawPlayer(g);
+		Draw(g);
 		Toolkit.getDefaultToolkit().sync();
 
 	}

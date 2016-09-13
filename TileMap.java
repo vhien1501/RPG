@@ -1,5 +1,6 @@
 import java.io.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class TileMap{
 
@@ -16,8 +17,6 @@ public class TileMap{
 	private BufferedImage tile;
 
 	public TileMap(String s){
-
-		sprite.LoadSprite("")
 
 		try{
 
