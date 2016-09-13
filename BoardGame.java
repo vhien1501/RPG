@@ -14,13 +14,15 @@ import javax.swing.Timer;
 
 public class BoardGame extends JPanel implements ActionListener{
 
-	private final int WIDTH = 500;
-	private final int HIEGHT = 500;
+	private final int WIDTH = 480;
+	private final int HIEGHT = 320;
 	private final int PLAYER_X = 100;
 	private final int PLAYER_Y = 100;
 	private final int DELAY =20;
 
 	private Player Hero;
+	private TileMap Map;
+
 
 	private Timer timer;
 
@@ -35,6 +37,7 @@ public class BoardGame extends JPanel implements ActionListener{
 		new Dimension(WIDTH, HIEGHT);
 
 		Hero = new Player(PLAYER_X, PLAYER_Y);
+		Map = new Map("Map");
 
 		addKeyListener(new TAdapter());
 
@@ -55,11 +58,11 @@ public class BoardGame extends JPanel implements ActionListener{
 
 	}
 
-	private void DrawPlayer(Graphics g){
+	private void Draw(Graphics g){
 		 	Graphics2D g2d = (Graphics2D) g;
 
 		 	g2d.drawImage(Hero.GetImage(), Hero.GetX(), Hero.GetY(), this);
-
+		 	Map.Draw(g2d);
 	}
 
 	@Override

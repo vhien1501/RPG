@@ -12,7 +12,7 @@ public class MainGame extends JFrame{
 	private void initUI(){
 
 		add(new BoardGame());
-		setSize(500, 500);
+		setSize(480, 320);
 		setTitle("TEST");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
